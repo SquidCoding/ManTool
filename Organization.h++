@@ -2,16 +2,11 @@
 #ifndef ORGANIZATION_H_
 #define ORGANIZATION_H_
 
-#include<iostream>
-using std::cout;
-using std::endl;
-using std::cin;
 #include<string>
 using std::string;
 #include<vector>
 using std::vector;
 #include"Employee.h++"
-using ManTool::Employee;
 
 namespace ManTool {
 class Organization {

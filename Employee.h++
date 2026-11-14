@@ -2,34 +2,30 @@
 #ifndef EMPLOYEE_H_
 #define EMPLOYEE_H_
 
-#include<iostream>
-using std::cout;
-using std::endl;
-using std::cin;
 #include<string>
 using std::string;
-
+#include"Organization.h++"
 
 namespace ManTool {
 class Employee {
     public:
-        explicit Employee(string org, string dep = "N/A", string fName = "John",
-                          string lName_ = "Doe", string jTitle = "N/A", int pType = 1, double pAmmt = 0.00,
-                          int id, int supId);
+        explicit Employee(ManTool::Organization& currOrgObj, string dept = "N/A", string fName = "John",
+                          string lName = "Doe", string jTitle = "N/A", int pType = 1, double pAmmt = 0.00,
+                          int id = 0, int supId = -1);
   
     
-        string GetEmployeeName(int option);
-        string GetLocation(int option);
-        string GetJobInfo(int option);
+        string GetEmployeeInfo(int option = 1);
+        string GetLocation() { return OrgName_ + " | " + DeptName_; };
+        string GetJobInfo(int option = 1);
 
-        void SetEmployeeName(string fName, string lName);
-        void SetLocation(string OrgName, string DepName);
-        void SetJobInfo(string title, int paytype, double payAmmt);
+        void SetEmployeeInfo(string fName, string lName, int id);
+        void SetLocation(string OrgName, string DeptName);
+        void SetJobInfo(string title, int paytype, double payAmmt, int supId);
 
-        void PrintProfile(Employee& e, bool toFile);
+        void PrintFullProfile(Employee& e, bool toFile = false);
     private:
         string OrgName_;
-        string DepName_; 
+        string DeptName_; 
         string fName_;
         string lName_;
         string Title_;
