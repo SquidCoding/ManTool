@@ -13,8 +13,9 @@ using std::string;
 namespace ManTool {
 class Employee {
     public:
-        explicit Employee(string org = "N/A", string dep = "N/A", string fName = "John",
-                          string lName_ = "Doe", string jTitle = "N/A", int pType = 1, double pAmmt = 0.00);
+        explicit Employee(string org, string dep = "N/A", string fName = "John",
+                          string lName_ = "Doe", string jTitle = "N/A", int pType = 1, double pAmmt = 0.00,
+                          int id, int supId);
   
     
         string GetEmployeeName(int option);
@@ -34,7 +35,8 @@ class Employee {
         string Title_;
         int PayType_;
         double PayAmmt_;
-        int lvl_;
+        int ID_;
+        int SuperiorID_;
 };
 
 } // end of namespace ManTool

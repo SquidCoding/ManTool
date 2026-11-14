@@ -25,6 +25,16 @@ class Organization {
         void SetOrgName(string orgName);
         void SetEST(int est);
         void SetOrgDescr(string orgDescr);
+
+        void PrintOrgTree(bool DeptLvl = false);
+        void ExportMembersToTSV(bool DeptLvl = false);
+        
+        void SearchThrough(int id);
+        void SearchThrough(string fName, string lName);
+        void SearchThrough(string jobTitle);
+        void SearchThrough(int payType);
+
+        Organization ImportOrg(string filePath);
     private:
         string OrgName_;
         int EST_;
