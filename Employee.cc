@@ -18,6 +18,9 @@ Employee::Employee(ManTool::Organization& currOrgObj, string dept, string fName,
 
 string Employee::GetEmployeeInfo(int option) {
     switch(option) {
+        case 0:
+            return fName_ + "_" +lName_;
+            break;
         case 1:
             return lName_ + ", " + fName_ + " | " + to_string(ID_);
             break;
@@ -43,4 +46,23 @@ string Employee::GetJobInfo(int option) {
             break;
     }
 }
+
+void Employee::SetEmployeeInfo(string fName, string lName, int id) {
+    fName_ = fName;
+    lName_ = lName;
+    ID_ = id;
+}
+
+void Employee::SetLocation(string org, string dept) {
+    OrgName_ = org;
+    DeptName_ = dept;
+}
+
+void Employee::SetJobInfo(string jTitle, int pType, double pAmmt, int supID) {
+    Title_ = jTitle;
+    PayType_ = pType;
+    PayAmmt_ = pAmmt;
+    SuperiorID_ = supID;
+}
+
 } // end namespace ManTool
