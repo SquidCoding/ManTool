@@ -75,8 +75,8 @@ void  PrintFullProfile(ManTool::Employee& e, bool toFile) {
             throw runtime_error("Failed To Create Employee File");
         }
     } else {
-        cout << e.GetLocation();
-        cout << e.GetEmployeeInfo(1);
+        cout << e.GetLocation() << "\n";
+        cout << e.GetEmployeeInfo(1) << "\n";
         cout << e.GetJobInfo(1);
         cout << endl;
     }
