@@ -19,7 +19,7 @@ Employee::Employee(ManTool::Organization& currOrgObj, string dept, string fName,
 string Employee::GetEmployeeInfo(int option) {
     switch(option) {
         case 0:
-            return fName_ + "_" +lName_;
+            return to_string(ID_) + "_" + fName_ + "_" +lName_;
             break;
         case 1:
             return lName_ + ", " + fName_ + " | " + to_string(ID_);
