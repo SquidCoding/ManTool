@@ -5,11 +5,12 @@
 #include<string>
 using std::string;
 #include"Organization.h++"
+#include"Department.h++"
 
 namespace ManTool {
 class Employee {
     public:
-        explicit Employee(ManTool::Organization& currOrgObj, string dept = "N/A", string fName = "John",
+        explicit Employee(ManTool::Organization& currOrgObj, ManTool::Department& currDeptObj, string fName = "John",
                           string lName = "Doe", string jTitle = "N/A", int pType = 1, double pAmmt = 0.00,
                           int id = 0, int supId = -1);
   

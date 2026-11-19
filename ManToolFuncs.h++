@@ -3,12 +3,13 @@
 #define MANTOOLFUNCS_H_
 
 #include<filesystem>
+namespace fs = std::filesystem;
 #include"Organization.h++"
 using ManTool::Organization;
 #include"Employee.h++"
 using ManTool::Employee;
 
-std::filesystem::path GetEXELoc();
+fs::path GetEXELoc();
 void PrintFullProfile(Employee& e, bool toFile);
 
 #endif // end MANTOOLFUNCS_H_

@@ -10,9 +10,9 @@ using std::to_string;
 #include"Organization.h++"
 
 namespace ManTool {
-Employee::Employee(ManTool::Organization& currOrgObj, string dept, string fName, string lName, string jTitle, int pType, double pAmmt, int id, int supId) {
+Employee::Employee(ManTool::Organization& currOrgObj, ManTool::Department& currDeptObj, string fName, string lName, string jTitle, int pType, double pAmmt, int id, int supId) {
     Employee::SetEmployeeInfo(fName, lName, id);
-    Employee::SetLocation(currOrgObj.GetOrgName(), dept);
+    Employee::SetLocation(currOrgObj.GetOrgName(), currDeptObj.GetDeptName());
     Employee::SetJobInfo(jTitle, pType, pAmmt, supId);
 }
 

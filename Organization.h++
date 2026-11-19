@@ -7,6 +7,7 @@ using std::string;
 #include<vector>
 using std::vector;
 #include"Employee.h++"
+#include"Department.h++"
 
 namespace ManTool {
 class Organization {
@@ -29,12 +30,16 @@ class Organization {
         void SearchThrough(string jobTitle);
         void SearchThrough(int payType);
 
+        void AddDept(ManTool::Department& d);
+        void AddMem(ManTool::Employee& e);
+
         Organization ImportOrg(string filePath);
     private:
         string OrgName_;
         int EST_;
         string OrgDescr_;
         vector<Employee> MemList_;
+        vector<Department> DeptList_;
 };
 
 } // end namespace ManTool
